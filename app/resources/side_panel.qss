@@ -1,0 +1,22 @@
+#rightbar{
+    background: rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 60px;
+    padding-right: 30px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+}
+#btnframe{
+    background-color: transparent;
+}
+
+#lb {
+    background-color: transparent;
+    color: rgba(30, 41, 59, 1);
+    font-family: IRANSansX;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
