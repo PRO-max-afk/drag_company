@@ -90,16 +90,13 @@ class MainWindow(QMainWindow):
 
     # -------------------------------
     def creating_side_panel(self):
-        style_path = "app\\resources\\side_panel.qss"
-        with open(style_path, 'r', encoding='utf-8') as f:
-            self.style_panel = f.read()
-
         side_frame = QFrame(self.side_panel)
         side_frame.setObjectName("btnframe")
         side_frame.setMaximumSize(210, 334)
 
         self.top_pn_lb = QHBoxLayout()
         self.panel_layout = QVBoxLayout(side_frame)
+        self.panel_layout.setContentsMargins(30,0,0,20)
         self.panel_layout.setSpacing(10)
 
         main_layout = QVBoxLayout(self.side_panel)

@@ -1,3 +1,4 @@
+
 QMainWindow{
     background-color: rgba(249, 250, 251, 1);
 }
@@ -12,6 +13,7 @@ QMainWindow{
 #btnframe{
     background-color: transparent;
 }
+
 
 #lb {
     background-color: transparent;
@@ -41,6 +43,34 @@ QMainWindow{
     line-height: 100%;
     letter-spacing: 0%;
 }
+#btn_design{
+    background-color: transparent;
+
+}
+#btn_design:hover{
+    background-color: #f5f5f5;
+}
+#btn_design:pressed{
+    background-color: transparent;
+}
+
+#search_line {
+    background-color: rgba(238, 238, 238, 1);
+    color: rgba(102, 102, 102, 1);
+    font-family: IRANSansX;
+    font-size: 10px;
+    border: 1px solid transparent;  /* ✅ لازم برای فعال شدن border-radius */
+    border-radius: 10px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
 
 #top_frames{
     background-color: rgba(255, 255, 255, 1);
