@@ -5,7 +5,7 @@ from app.views.mainwindow import MainWindow
 
 def main():
     app= QApplication(sys.argv)
-    ##veiw mode;
+    ##veiw model
     vm= MainViewModel()
     ##view
     window= MainWindow(vm)
