@@ -99,3 +99,321 @@ QMainWindow{
     border-radius: 12px;
     padding: 20px;
 }
+
+#drop_down {
+    background-color: transparent;
+    color: rgba(102, 102, 102, 1);
+    font-weight: 400;
+    font-family: IRANSansX;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding-left: 10px;
+
+}
+
+/* دکمه فلش */
+#drop_down::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top left;
+    width: 20px;
+    border: none;
+}
+
+/* تصویر فلش */
+#drop_down::down-arrow {
+    image: url("assets/drop.svg");
+    width: 8px;
+    height: 4.44px;
+}
+
+
+#add_btn{
+    background-color: rgba(99, 102, 241, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: IRANSansX;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0%;
+    border-radius: 8px;
+}
+#add_btn:hover{
+    background-color: rgb(145, 145, 242);
+}
+#add_btn:pressed{
+    background-color: rgba(99, 102, 241, 1);
+}
+#add_btn_resize{
+    background-color: rgba(99, 102, 241, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: IRANSansX;
+    font-size: 9px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0%;
+    border-radius: 4px;
+}
+
+#add_btn_resize:hover{
+    background-color: rgb(145, 145, 242);
+}
+#add_btn_resize:pressed{
+    background-color: rgba(99, 102, 241, 1);
+}
+
+#drop_down_resize {
+    background-color: transparent;
+    color: rgba(102, 102, 102, 1);
+    font-weight: 400;
+    font-family: IRANSansX;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding-left: 5px;
+
+}
+
+/* دکمه فلش */
+#drop_down_resize::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top left;
+    width: 17px;
+    border: none;
+}
+
+/* تصویر فلش */
+#drop_down_resize::down-arrow {
+    image: url("assets/drop.svg");
+    width: 6.6px;
+    height: 3.44px;
+}
+
+#table {
+    border: none;
+    border-radius: 12px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    gridline-color: transparent;
+    alternate-background-color: rgba(0, 179, 166, 0.05);
+    background-color: #ffffff;
+}
+
+#table::item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px;
+}
+
+#table::item:selected {
+    background: transparent;
+    color: black;
+}
+
+#table QHeaderView {
+    background: transparent;
+}
+
+#table QHeaderView::section {
+    background-color: rgba(147, 51, 234, 1);
+    color: #fff;
+    font-family: IRANSansX;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px;
+    border: none;
+}
+#table QHeaderView::section:first {
+    border-top-left-radius: 8px; 
+}
+#table QHeaderView::section:last {
+    border-top-right-radius: 8px;  
+}
+
+#table QTableCornerButton::section {
+    background-color: rgba(147, 51, 234, 1);
+    border: none;
+}
+
+
+/* Scrollbars */
+#table QScrollBar:vertical {
+    background: #eee;
+    width: 10px;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+#table QScrollBar::handle:vertical {
+    background: #999;
+    min-height: 20px;
+    border-radius: 5px;
+}
+#table QScrollBar::handle:vertical:hover {
+    background: #666;
+}
+#table QScrollBar::add-line:vertical,
+#table QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+#table QScrollBar:horizontal {
+    background: #eee;
+    height: 10px;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+#table QScrollBar::handle:horizontal {
+    background: #999;
+    min-width: 20px;
+    border-radius: 5px;
+}
+#table QScrollBar::handle:horizontal:hover {
+    background: #666;
+}
+
+#table_resize {
+    border: none;
+    border-radius: 8px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    gridline-color: transparent;
+    alternate-background-color: rgba(0, 179, 166, 0.05);
+    background-color: #ffffff;
+}
+
+#table_resize::item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 4px;
+}
+
+#table_resize::item:selected {
+    background: transparent;
+    color: black;
+}
+
+#table_resize QHeaderView {
+    background: transparent;
+}
+
+#table_resize QHeaderView::section {
+    background-color: rgba(147, 51, 234, 1);
+    color: #fff;
+    font-family: IRANSansX;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px;
+    border: none;
+}
+#table_resize QHeaderView::section:first {
+    border-top-left-radius: 8px; 
+}
+#table_resize QHeaderView::section:last {
+    border-top-right-radius: 8px;  
+}
+
+#table_resize QTableCornerButton::section {
+    background-color: rgba(147, 51, 234, 1);
+    border: none;
+}
+
+
+/* Scrollbars */
+#table_resize QScrollBar:vertical {
+    background: #eee;
+    width: 5px;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+#table_resize QScrollBar::handle:vertical {
+    background: #999;
+    min-height: 10px;
+    border-radius: 5px;
+}
+#table_resize QScrollBar::handle:vertical:hover {
+    background: #666;
+}
+#table_resize QScrollBar::add-line:vertical,
+#table_resize QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+#table_resize QScrollBar:horizontal {
+    background: #eee;
+    height: 5px;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+#table_resize QScrollBar::handle:horizontal {
+    background: #999;
+    min-width: 20px;
+    border-radius: 5px;
+}
+#table_resize QScrollBar::handle:horizontal:hover {
+    background: #666;
+}
+
+#numaric_lb{
+    color: rgba(51, 51, 51, 1);
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+#numaric_resize{
+    color: rgba(51, 51, 51, 1);
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+#page_combo{
+    background-color: transparent;
+    color: rgba(51, 51, 51, 1);
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    border: none;
+    border-bottom: 1px solid rgba(153, 153, 153, 1);
+    padding-left: 4px;
+    padding-right: 4px;
+
+    
+}
+#page_combo::down-arrow{
+    image: url("assets/Icon awesome-caret-down.svg");
+    width: 7.3px;
+    height: 4.15px;
+}
+
+#page_combo_resize{
+    background-color: transparent;
+    color: rgba(51, 51, 51, 1);
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(153, 153, 153, 1);
+    padding-left: 2px;
+    padding-right: 2px;    
+}
+#page_combo_resize::down-arrow{
+    image: url("assets/Icon awesome-caret-down.svg");
+    width: 4px;
+    height: 2.5px;
+}
