@@ -54,6 +54,7 @@ QMainWindow{
 }
 #btn_design{
     background-color: transparent;
+    border: none;
 
 }
 #btn_design:hover{
@@ -192,7 +193,7 @@ QMainWindow{
 
 /* تصویر فلش */
 #drop_down_resize::down-arrow {
-    image: url("assets/drop.svg");
+    image: url(":/assets/drop.svg");
     width: 6.6px;
     height: 3.44px;
 }
@@ -413,7 +414,22 @@ QMainWindow{
     padding-right: 2px;    
 }
 #page_combo_resize::down-arrow{
-    image: url("assets/Icon awesome-caret-down.svg");
+    image: url(":/assets/Icon awesome-caret-down.svg");
     width: 4px;
     height: 2.5px;
+}
+
+#new_item{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    padding: 32px;
+}
+
+#item_title{
+    color: rgba(99, 102, 241, 1);
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Estedad;
+    line-height: 100%;
+    letter-spacing: 0%;
 }

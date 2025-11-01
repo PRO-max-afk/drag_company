@@ -4,6 +4,8 @@ from PyQt6.QtGui import QIcon,QPixmap
 ##components
 from app.components.top_widget import TopWidget
 from app.components.stock_widget import StockFrame
+## ViewModel
+from app.viewmodels.stock_viewmodel import Stock_ViewModel
 
 
 class Stock(QWidget):
@@ -25,3 +27,5 @@ class Stock(QWidget):
         middle_layout.setContentsMargins(20,20,20,20)
         ##
         self.stock_layout.addLayout(middle_layout)
+        ##viewmodel
+        self.vm= Stock_ViewModel(self)

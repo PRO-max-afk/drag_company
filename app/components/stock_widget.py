@@ -1,8 +1,7 @@
-from PyQt6.QtWidgets import (
-    QWidget, QLabel, QVBoxLayout, QHBoxLayout, QFrame,
-    QSizePolicy, QPushButton, QComboBox,QTableWidget,QHeaderView,QAbstractItemView,QTableWidgetItem)
+from PyQt6.QtWidgets import (QLabel, QVBoxLayout, QHBoxLayout, QFrame,
+    QSizePolicy, QPushButton, QComboBox,QTableWidget,QHeaderView,QAbstractItemView)
 from PyQt6.QtCore import Qt, QSize
-from PyQt6.QtGui import QIcon, QPixmap
+from PyQt6.QtGui import QIcon
 
 from app.core.img import AssetManager
 
@@ -114,14 +113,11 @@ class StockFrame(QFrame):
             self.btn_layout.addWidget(btn)
         self.btn_layout.insertWidget(2, self.numaric_lb,alignment=Qt.AlignmentFlag.AlignCenter)
         self.btn_layout.addWidget(self.pages_combo)
-
-
-
-
     ##
     def resizeEvent(self, event):
         path="app\\resources\\style.qss"
-        with open(path,'r',encoding='utf-8') as f:
+        file_path= self.assets.resource_path(path)
+        with open(file_path,'r',encoding='utf-8') as f:
             resize_style= f.read()
         window_width = self.width()
 
@@ -178,5 +174,6 @@ class StockFrame(QFrame):
             self.stock_table.setStyleSheet(resize_style)
 
         return super().resizeEvent(event)
+    ##
 
 

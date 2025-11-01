@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/drop.svg</file>
+        <file>assets/Icon awesome-caret-down.svg</file>
+    </qresource>
+</RCC>

@@ -3,7 +3,7 @@ from PyQt6.QtWidgets import (
     QStackedWidget, QPushButton, QFrame, QLabel, QSizePolicy
 )
 from PyQt6.QtCore import Qt, QPropertyAnimation, QRect
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtGui import QPixmap,QIcon
 from app.core.img import AssetManager
 from app.core.font import FontLoader
 from functools import partial
@@ -28,6 +28,7 @@ class MainWindow(QMainWindow):
         self.img = AssetManager()
 
         self.setWindowTitle("برنامه دوا فروشی")
+        self.setWindowIcon(QIcon(self.img.get_asset_path("icon.png")))
 
         self.screen = QApplication.primaryScreen().geometry()
         self.setGeometry(self.screen.x(), self.screen.y(), self.screen.width(), self.screen.height())
@@ -118,8 +119,8 @@ class MainWindow(QMainWindow):
         self.notifi_btn = QPushButton("اطلاعیه‌ها")
         self.settings_btn = QPushButton("تنظیمات")
 
-        btn_style_path = "app\\resources\\btn_style.qss"
-        btn_style_hover = "app\\resources\\btn_change.qss"
+        btn_style_path = self.img.resource_path("app/resources/btn_style.qss")
+        btn_style_hover = self.img.resource_path("app/resources/btn_change.qss")
         with open(btn_style_path, 'r', encoding='utf-8') as f:
             self.default_style = f.read()
         with open(btn_style_hover, 'r', encoding='utf-8') as f:
@@ -190,7 +191,8 @@ class MainWindow(QMainWindow):
     def _apply_theme(self, theme: str):
         try:
             path = f'app\\resources\\{theme}_style.qss' if theme == 'dark' else 'app\\resources\\style.qss'
-            with open(path, 'r', encoding='utf-8') as f:
+            file_path= self.img.resource_path(path)
+            with open(file_path, 'r', encoding='utf-8') as f:
                 qss = f.read()
             self.setStyleSheet(qss)
             print(f"✅ {theme} theme applied successfully")

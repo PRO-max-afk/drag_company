@@ -20,6 +20,14 @@ class AssetManager:
         except Exception as e:
             print(f"❌ خطا در تشخیص مسیر پایه: {e}")
             return os.path.abspath(".")
+        
+    def resource_path(self,relative_path):
+        """برگرداندن مسیر درست فایل در حالت Build و اجرای عادی"""
+        try:
+            base_path = sys._MEIPASS  # وقتی برنامه build شده است
+        except Exception:
+            base_path = os.path.abspath(".")  # در حالت اجرای معمولی
+        return os.path.join(base_path, relative_path)
 
     def get_asset_path(self, filename: str) -> str | None:
         """دریافت مسیر مطلق فایل داخل پوشه assets"""
